@@ -1,0 +1,8 @@
+<h3>{{ title }}</h3>
+<p>{{ description }}</p>
+<p>{{ deadline }}</p>
+<p *ngIf="completed">Completed</p>
+<p *ngIf="!completed">In progress</p>
+<button (click)="onUpdate(true)" *ngIf="!completed">Completed</button>
+<button (click)="onUpdate(false)" *ngIf="completed">In progress</button>
+<button (click)="onDelete()">Delete todo</button>
